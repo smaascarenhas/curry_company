@@ -174,37 +174,11 @@ image = Image.open( 'logo.png')
 st.sidebar.image( image, width=120 )
 
 st.sidebar.markdown( '#  Cury Company' )
-st.sidebar.markdown( '### category' )
 
 # =================================================
 # SelectBox Column
 # =================================================
-data_df = pd.DataFrame(
-    {
-        "category": [
-            "📊 Data Exploration",
-            "📈 Data Visualization",
-            "📊 Data Exploration",
-        ],
-    }
-)
 
-st.sidebar.data_editor(
-    data_df,
-    column_config={
-        "category": st.column_config.SelectboxColumn(
-            "App Category",
-            help="The category of the app",
-            width="medium",
-            options={
-                1:  "📊 Data Exploration",
-                2:  "📈 Data Visualization",
-                3:  "🤖 LLM",
-            },
-        )
-    },
-    hide_index=True,
-)
 st.sidebar.markdown( '##  Fastest Delivery in Town' )
 st.sidebar.markdown( """___""")
 
